@@ -194,7 +194,7 @@ color:#fff;
 }
 .create_order input[type=submit]:hover, .sign_up input[type=submit]:hover, .sign_in input[type=submit]:hover {
      background:#ccc;
- color:#670C09;
+ color:##9898ff;
 }
 .create_order input[type=reset]:hover, .sign_up input[type=reset]:hover, .sign_in input[type=reset]:hover {
     background-color: #ddd;

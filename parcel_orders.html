@@ -25,7 +25,7 @@
 					<nav>
 						<ul>
 							<li><a href="index.html" class="current">Home</a></li>
-							<li><a href="signup.html">Send</a></li>
+							
 							<li><a href="signup.html">Profile</a></li>
 						</ul>
 					</nav>
@@ -37,9 +37,9 @@
 
 
 <div class="quotation_form create_order">
- <h2>Get a Quote</h2><hr>
+ <h2>Get a Quotation from SendIT</h2><hr>
   <form method="post" action="">
-    <label for="from">Pickup Location: <span class="asterik"> *</span></label>
+    <label for="from">Pickup Location/Locations: <span class="asterik"> *</span></label>
     <select>
       <option value="nairobi">Nairobi</option>
       <option value="nakuru">Nakuru</option>
@@ -55,6 +55,14 @@
       <option value="kisumu">Kisumu</option>
       <option value="kitale">Kitale</option>
     </select>
+    <label for="from">location: <span class="asterik"> *</span></label>
+    <select>
+      <option value="nairobi">CBD</option>
+      <option value="nakuru">Upperhill</option>
+      <option value="mombasa">Thogoto</option>
+      <option value="kisumu">Kilimani</option>
+      <option value="kitale">Westlands</option>
+    </select>
     <label for="from">Weight (Kg): <span class="asterik"> *</span></label>
     <input type="text" name="weight" id="weight" value="20">
     <input type="submit" name="quote" id="quote" value="Quote">
@@ -63,7 +71,7 @@
  <h2>Create Order</h2><hr>
     <form method="post" action="">
     <label for="plan">Plan:</label>
-    <input type="text" name="plan" id="plan" value="Express">
+    <input type="text" name="plan" id="plan" value="Direct Delivery">
     <label for="days">Delivery (Days):</label>
     <input type="text" name="days" id="days" value="1">
     <label for="plan">Quote:</label>
@@ -74,7 +82,7 @@
     </form>
     <form method="post" action="">
     <label for="plan">Plan:</label>
-    <input type="text" name="plan" id="plan" value="Priority">
+    <input type="text" name="plan" id="plan" value="Shortest Time Possible">
     <label for="days">Delivery (Days):</label>
     <input type="text" name="days" id="days" value="2">
     <label for="plan">Quote:</label>
@@ -85,7 +93,7 @@
     </form>
     <form method="post" action="order_quotation.html">
     <label for="plan">Plan:</label>
-    <input type="text" name="plan" id="plan" value="Value">
+    <input type="text" name="plan" id="plan" value="Today">
     <label for="days">Delivery (Days):</label>
     <input type="text" name="days" id="days" value="3">
     <label for="plan">Quote:</label>

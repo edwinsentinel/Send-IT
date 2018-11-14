@@ -7,6 +7,8 @@
 	<meta name="keywords" content="Send-IT ">
 	<meta name="author" content="Edwin Waweru">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<title>Send-IT</title>
 	</head>
 <header class="spacing-small">
@@ -21,7 +23,7 @@
 					<nav>
 						<ul>
 							<li><a href="index.html">Home</a></li>
-							<li><a href="send.html">Send</a></li>
+							
 							<li><a href="profile.html">Profile</a></li>
 						</ul>
 					</nav>
@@ -29,10 +31,106 @@
 			</div>
 		</div>
 	</header>
-	<footer>
+<div class="profile_wrapper">
+<div class="tab">
+ <button class="tab_links" onclick="profile(event, 'Delivered')">Delivered Parcels (2)</button>
+ <button class="tab_links" onclick="profile(event, 'Transit')">In Transit (0)</button>
+ <button class="tab_links" onclick="profile(event, 'All')" id="default">All Parcel Orders (2)</button>
+</div>
+
+<div class="profile">
+<div id="Delivered" class="tab_content">
+    <table>
+      <tr><th>Parcel ID</th><th>Pickup Location</th><th>Destination</th><th>Weight(Kg)</th><th>Plan</th><th>Quotation (Ksh)</th><th>Status</th><th>Edit Order</th><th>Cancel Order</th></tr>
+      <tr><td>#201800012</td><td>Nairobi</td><td>Kisumu</td><td>20kg</td><td>Priority</td><td>1,000</td><td>None</td><td><a href="change_destination.html"><i class="fa fa-pencil"></i></a></td><td><i class="fa fa-trash"></i></td>
+  </tr>
+
+        <tr><td>#201800012</td><td>Nairobi</td><td>Kisumu</td><td>20kg</td><td>Priority</td><td>1,000</td><td>None</td><td><a href="change_destination.html"><i class="fa fa-pencil"></i></a></td><td><i class="fa fa-trash"></i></td>
+  </tr>
+
+    </table>
+
+</div>
+
+<div id="Transit" class="tab_content">
+
+
+
+</div>
+
+<div id="All" class="tab_content">
+    <table>
+      <tr><th>Parcel ID</th><th>Pickup Location</th><th>Destination</th><th>Weight(Kg)</th><th>Plan</th><th>Quotation (Ksh)</th><th>Status</th><th>Edit Order</th><th>Cancel Order</th></tr>
+      <tr><td>#201800012</td><td>Nairobi</td><td>Kisumu</td><td>20kg</td><td>Priority</td><td>1,000</td><td>None</td><td><a href="change_destination.html"><i class="fa fa-pencil"></i></a></td><td><i class="fa fa-trash"></i></td>
+  </tr>
+
+        <tr><td>#201800012</td><td>Nairobi</td><td>Kisumu</td><td>20kg</td><td>Priority</td><td>1,000</td><td>None</td><td><a href="change_destination.html"><i class="fa fa-pencil"></i></a></td><td><i class="fa fa-trash"></i></td>
+  </tr>
+
+    </table>
+  </div>
+</div>
+</div></div>
+
+
+
+	<!-- SERVICES -->
+	<section class="services spacing-large">
 		<div class="vessels">
-			<p>Send-IT by Edwin Waweru</p>
+			<div class="columns al-center">
+				<div class="colls colls-third">
+					<div><img src="images/send.png" class="icon"></div>
+					<h3 class="main-color-dark">send</h3>
+					<p>Send to all over the globe</p>
+				</div>
+				<div class="colls colls-third">
+					<div><img src="images/deliver.png" class="icon"></div>
+					<h3 class="main-color-dark">Deliver</h3>
+					<p>Check deliveries</p>
+				</div>
+				<div class="colls colls-third">
+					<div><img src="images/cancel.jpeg" class="icon"></div>
+					<h3 class="main-color-dark">Cancel an order</h3>
+					<p>Cancel an order</p>
+				</div>
+			</div>
+		</div>
+	</section>
+<footer>
+		<div class="vessels">
+			
+			<br>
+    &copy; 2018 - SendIT by Edwin Waweru. <a href="all_ordersadmin.html">Admin</a>
 		</div>
 	</footer>
+</body>
+</html>
+<script>
+  function profile(evt, type) {
+      // Declare all variables
+      var i, tab_content, tab_links;
+
+
+      tab_content = document.getElementsByClassName("tab_content");
+      for (i = 0; i < tab_content.length; i++) {
+          tab_content[i].style.display = "none";
+      }
+
+
+      tab_links = document.getElementsByClassName("tab_links");
+      for (i = 0; i < tab_links.length; i++) {
+          tab_links[i].className = tab_links[i].className.replace(" active", "");
+      }
+
+
+      document.getElementById(type).style.display = "block";
+      evt.currentTarget.className += " active";
+  }
+</script>
+<script>
+document.getElementById("default").click();
+</script>
+
+
 </body>
 </html>

@@ -7,9 +7,13 @@
 	<meta name="keywords" content="Send-IT ">
 	<meta name="author" content="Edwin Waweru">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<title>Send-IT</title>
 	</head>
-<header class="spacing-small">
+<body>
+	<!-- HEADER with Nav -->
+	<header class="spacing-small">
 		<div class="vessels">
 			<div class="columns">
 				<div class="colls colls-half">
@@ -20,15 +24,41 @@
 				<div class="colls colls-half-half al-right">
 					<nav>
 						<ul>
-							<li><a href="index.html">Home</a></li>
-							
-							<li><a href="profile.html">Profile</a></li>
+							<li><a href="index.html" class="current">Home</a></li>
+							<li><a href="all_ordersadmin.html">View Orders</li>
+							<li><a href="reviews.html">Customer Reviews</li>
 						</ul>
 					</nav>
 				</div>
 			</div>
 		</div>
 	</header>
+<div class="quotation create_order">
+
+  <form method="post" action="all_orders_admin.html">
+    <label for="description">Parcel ID: <span class="asterik"> *</span></label>
+    <input type="text" name="description" id="description" Value="#20180045">
+    <label for="from">Present Location: <span class="asterik"> *</span></label>
+    <select>
+      <option value="nairobi">Nairobi</option>
+      <option value="nakuru">Nakuru</option>
+      <option value="mombasa">Mombasa</option>
+      <option value="kisumu">Kisumu</option>
+      <option value="kitale">Kitale</option>
+    </select>
+    <label for="from">Status: <span class="asterik"> *</span></label>
+    <select>
+      <option value="nairobi">None</option>
+      <option value="nakuru">In Transit</option>
+      <option value="mombasa">Delivered</option>
+    </select><br>
+  </form>
+<a href="all_ordersadmin.html"><button class="update" name="login" id="login">Update</button></a>
+<button class="reset" name="login" id="login">Cancel</button>
+</div>
+</div>
+
+
 	<!-- SERVICES -->
 	<section class="services spacing-large">
 		<div class="vessels">
